@@ -1,0 +1,37 @@
+ <!--HTML for reporting tool page-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reporting Tool</title>
+    <style>
+      h1, h3 { text-align: center; }
+      div {border: 1px solid #999;
+                 padding: 10px 10px;
+                 margin: 10px 20%%;}
+
+    </style>
+  </head>
+  <body>
+    <h1>Reporting Tool</h1>
+
+        <h3 id = "articles">1. What are the most popular three articles of all time?</h3>
+
+        {% for i in ardict %}
+            <div class = "articles"><em>{{i}}</em><br><br>{{ardict[i]}} views<br></div>
+        {% endfor %}
+
+        <h3 id = "authors">2. Who are the most popular article authors of all time?</h3>
+
+        {% for i in audict %}
+        <div class = "authors"><em>{{i}}</em><br><br>{{audict[i]}} views<br></div>
+        {% endfor %}
+
+        <h3 id = "errors">3. On which days did more than 1 of requests lead to errors?</h3>
+
+        {% for i in reqdict %}
+        <div class = "errors"><em>{{i}}</em><br><br>{{reqdict[i]}} %<br></div>
+        {% endfor %}
+
+  </body>
+</html>
