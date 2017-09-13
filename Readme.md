@@ -4,7 +4,7 @@
 
 ## Prerequisites:
 
-    Python 2.x
+    Python 3.x
     Vagrant VM
     Flask
     Psycopg2
